@@ -25,10 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY='django-insecure-6a)^d5#t71$4jj7sv(ujppt8ugd2c-snz1u^laruh#%6i(9pfd'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG') == 'True'
+DEBUG ='True'
 
 # Parse ALLOWED_HOSTS from a comma-separated string
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
@@ -62,6 +64,7 @@ MIDDLEWARE = [
 
 # Parse CORS_ALLOWED_ORIGINS from a comma-separated string
 # CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'backend.urls'
@@ -89,7 +92,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / os.getenv('DATABASE_NAME'),
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -132,20 +135,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': None,
 }
 
-CORS_ALLOW_METHODS = [
-    "GET",
-    "POST",
-    "PUT",
-    "PATCH",
-    "DELETE",
-    "OPTIONS"
-]
 
-CORS_ALLOW_HEADERS = [
-    "content-type",
-    "authorization",
-    "X-Requested-With"
-]
 
 
 SIMPLE_JWT = {
@@ -157,9 +147,8 @@ SIMPLE_JWT = {
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.getenv('EMAIL_HOST')
-EMAIL_PORT = int(os.getenv('EMAIL_PORT'))
-EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS') == 'True'
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER='nikhil9703m@gmail.com'
+EMAIL_HOST_PASSWORD='txcq eyyy jzei llaa'
