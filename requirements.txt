@@ -1,0 +1,7 @@
+
+Django>=5.1.6
+Gunicorn>=21.2.0
+django-cors-headers
+whitenoise
+django-environ
+djangorestframework
