@@ -1,7 +1,9 @@
-
 Django>=5.1.6
 Gunicorn>=21.2.0
 django-cors-headers
 whitenoise
 django-environ
 djangorestframework
+boto3>=1.34.0
+django-storages>=1.14.0
+python-dotenv>=1.0.0
